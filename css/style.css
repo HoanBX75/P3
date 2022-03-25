@@ -1,0 +1,421 @@
+/* VARIABLE */
+/* MIXINS  */
+html {
+  font-family: "roboto", sans-serif;
+  font-size: 16px;
+  background-color: #fff;
+}
+
+/* ----------------------------------------------------*/
+/* Site title header                                   */
+/* ----------------------------------------------------*/
+.title-site {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.title-site img {
+  width: 30%;
+}
+
+/* ----------------------------------------------------*/
+/* form section                                        */
+/* ----------------------------------------------------*/
+.Formulaire {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.form-OMF {
+  text-align: center;
+  height: 280px;
+  background-color: rgba(233, 233, 233, 0.522);
+}
+.form-OMF .search-ville {
+  width: 100%;
+  height: 40px;
+  border-top: 2px solid rgba(128, 128, 128, 0.33);
+  background-color: #e9e9e9;
+}
+.form-OMF .search-ville input {
+  height: 100%;
+  border: none;
+  background-color: #e9e9e9;
+  padding-left: 15px;
+}
+.form-OMF .search-ville input:focus {
+  outline: none;
+}
+.form-OMF .search-ville input::placeholder {
+  color: black;
+  font-size: 14px;
+  font-weight: 600;
+}
+.form-OMF .form-txt {
+  width: 100%;
+}
+.form-OMF .form-txt p {
+  opacity: 0.6;
+  margin-top: 15px;
+}
+.form-OMF .btn-form {
+  border-radius: 20px;
+  width: 200px;
+  height: 40px;
+  border: none;
+  padding: 0.8em;
+  background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  color: white;
+  font-weight: 600;
+  transition: 0.3s linear;
+}
+.form-OMF .btn-form:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+/* ----------------------------------------------------*/
+/* Functionalities section                             */
+/* ----------------------------------------------------*/
+.Functionalities h2 {
+  width: 80%;
+  margin: auto;
+  font-weight: bolder;
+  font-size: 22px;
+  margin-bottom: 30px;
+}
+.Functionalities .menu {
+  width: 80%;
+  padding: 0;
+  margin: auto;
+}
+.Functionalities .menu .menu-flex {
+  position: relative;
+  box-shadow: 1px 7px 15px -3px rgba(74, 74, 74, 0.6);
+  background-color: rgba(233, 233, 233, 0.522);
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 20px;
+  height: 65px;
+  line-height: 65px;
+  margin-bottom: 25px;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  transition: 0.3s ease-in-out;
+  /* Transitions event */
+  /* Number */
+  /* Icon */
+  /*
+  .text-fonction{
+      border: $border-debug;
+
+  }
+  */
+}
+.Functionalities .menu .menu-flex:hover {
+  background: #9256dc2e;
+}
+.Functionalities .menu .menu-flex:hover .icon-fonction {
+  color: #9356DC;
+}
+.Functionalities .menu .menu-flex .number-fonction {
+  position: absolute;
+  top: 22.5px;
+  left: 0px;
+  left: -10px;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  color: #fff;
+  font-weight: lighter;
+  background-color: #9356DC;
+}
+.Functionalities .menu .menu-flex .number-fonction span {
+  font-size: 12px;
+  position: absolute;
+  top: -22px;
+  left: 7px;
+}
+.Functionalities .menu .menu-flex .icon-fonction {
+  margin: 0 20px;
+}
+
+/* ----------------------------------------------------*/
+/* Restaurant  section                                 */
+/* ----------------------------------------------------*/
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  background-color: #e9e9e9;
+  padding-bottom: 70px;
+}
+.restaurant .title-restaurant {
+  width: 80%;
+  padding: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 80px;
+}
+.restaurant .title-restaurant h2 {
+  font-size: 22px;
+}
+
+.card {
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 1px 7px 15px -3px rgba(74, 74, 74, 0.6);
+  overflow: hidden;
+  margin: 0 auto;
+  width: 90%;
+  transition: 0.2s ease-in-out;
+  width: 80%;
+  padding: 0;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.card:hover {
+  transform: scale(1.02);
+}
+.card .link-menu {
+  text-decoration: none;
+}
+
+/* card image */
+.card .card-img {
+  height: 30vh;
+  width: 100%;
+}
+.card .card-img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.card .card-img .nouveau-restaurant {
+  font-size: 15px;
+  color: #2d806b;
+  border-radius: 3px;
+  text-align: center;
+  line-height: 30px;
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  top: 5%;
+  right: 5%;
+  background-color: #99E2D0;
+}
+
+/* card description  */
+.card .card-description {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+}
+.card .card-description .card-title {
+  height: 10vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  padding-left: 15px;
+  justify-content: center;
+  margin: 0;
+  color: black;
+  background-color: #fff;
+}
+.card .card-description .card-title .card-name {
+  margin: 0p;
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+.card .card-description .card-title .card-location {
+  margin: 0px;
+  margin-bottom: 3px;
+  font-size: 14px;
+}
+.card .card-description .heart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+}
+.card .card-description .heart .fill {
+  font-size: 25px;
+  color: black;
+  cursor: pointer;
+  margin-right: 15px;
+  line-height: 38px;
+}
+.card .card-description .heart .fill:hover {
+  color: #b35cdc;
+}
+
+/* ----------------------------------------------------*/
+/* Footer                                   */
+/* ----------------------------------------------------*/
+footer {
+  background-color: rgba(39, 39, 39, 0.9);
+  display: flex;
+  flex-direction: column;
+}
+
+.title-site_footer {
+  width: 80%;
+  margin: auto;
+  margin-top: 15px;
+}
+.title-site_footer img {
+  width: 30%;
+  margin: auto;
+}
+
+.nav-footer {
+  width: 80%;
+  margin: auto;
+}
+.nav-footer ul {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  padding: 0;
+}
+.nav-footer ul li {
+  margin-bottom: 10px;
+}
+.nav-footer ul a {
+  text-decoration: none;
+  color: white;
+}
+.nav-footer ul a .foot-icon {
+  padding-right: 10px;
+  font-size: 12px;
+}
+.nav-footer ul a:hover {
+  transform: scale 1.2;
+}
+.nav-footer ul a .foot-txt {
+  font-size: 15px;
+}
+
+header div a {
+  position: absolute;
+  top: 5%;
+  left: 2%;
+}
+
+header div a i {
+  font-size: 19px;
+}
+
+.img-restaurant {
+  height: 30vh;
+}
+.img-restaurant img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.translation {
+  transform: translateY(-35px);
+}
+
+.name-restaurant {
+  height: auto;
+  background-color: #e9e9e9;
+  padding-top: 30px;
+  border-top-left-radius: 35px;
+  border-top-right-radius: 35px;
+  padding-bottom: 35px;
+}
+.name-restaurant .title-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 20px;
+}
+.name-restaurant .title-menu .heart .fill {
+  font-size: 24px;
+  margin-left: 24px;
+}
+.name-restaurant h3 {
+  text-transform: uppercase;
+  font-weight: lighter;
+  opacity: 0.5;
+  margin-left: 20px;
+}
+
+.card-menu {
+  display: flex;
+  width: 95%;
+  background-color: rgba(255, 255, 255, 0.823);
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0px 0px 10px 8px #CDCDCD;
+  padding-left: 8px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+}
+.card-menu .card-txt {
+  width: 60%;
+}
+.card-menu .card-txt h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+}
+.card-menu .card-txt p {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+.card-menu .card-price {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-weight: bold;
+  padding-right: 8px;
+}
+.card-menu .coche {
+  display: none;
+}
+
+.btn-menu {
+  display: block;
+  border-radius: 20px;
+  width: 200px;
+  height: 40px;
+  border: none;
+  padding: 0.8em;
+  background-image: linear-gradient(to left top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  color: white;
+  font-weight: 600;
+  transition: 0.3s linear;
+  margin: 50px auto;
+}
+.btn-menu:hover {
+  filter: brightness(1.1);
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.underline {
+  position: relative;
+}
+.underline .line {
+  width: 50px;
+  height: 7px;
+  border-bottom: 4px solid #99E2D0;
+}
+
+/*# sourceMappingURL=style.css.map */
