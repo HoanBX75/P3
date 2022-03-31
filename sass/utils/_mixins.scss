@@ -1,0 +1,20 @@
+
+@mixin btn-OMF{
+    border-radius: 20px;
+    width: 200px;
+    height: 40px;
+    border: none;
+    padding: 0.8em;
+    background-image: linear-gradient(to left top, 
+                       #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+ //  background-color: $color1;
+  color: white;
+    font-weight: 600;
+  //  box-shadow: 1px 7px 15px -3px rgba(74,74,74,0.9);
+    transition: 0.3s linear;
+    &:hover{
+        filter: brightness(1.1);
+        cursor: pointer;
+        transform: scale(1.02);
+    }
+}
