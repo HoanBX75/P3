@@ -248,17 +248,21 @@ html {
 }
 .card .card-description .heart .fill {
   font-size: 25px;
-  color: black;
+  color: grey;
   cursor: pointer;
   margin-right: 15px;
   line-height: 38px;
 }
 .card .card-description .heart .fill:hover {
-  color: #b35cdc;
+  opacity: 1;
+  background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
 }
 
 /* ----------------------------------------------------*/
-/* Footer                                   */
+/* Footer                                              */
 /* ----------------------------------------------------*/
 footer {
   background-color: rgba(39, 39, 39, 0.9);
@@ -274,6 +278,11 @@ footer {
 .title-site_footer img {
   width: 30%;
   margin: auto;
+}
+
+footer .svg-color {
+  width: 100px;
+  stroke: white;
 }
 
 .nav-footer {
@@ -298,7 +307,8 @@ footer {
   font-size: 12px;
 }
 .nav-footer ul a:hover {
-  transform: scale 1.2;
+  color: #99E2D0;
+  transform: scale 2;
 }
 .nav-footer ul a .foot-txt {
   font-size: 15px;
@@ -308,6 +318,11 @@ header div a {
   position: absolute;
   top: 5%;
   left: 2%;
+}
+
+.title-site.margin {
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 header div a i {
@@ -341,6 +356,7 @@ header div a i {
   justify-content: flex-start;
   align-items: center;
   margin-left: 20px;
+  font-family: "Shrikhand", sans-serif;
 }
 .name-restaurant .title-menu .heart .fill {
   font-size: 24px;
@@ -353,41 +369,106 @@ header div a i {
   margin-left: 20px;
 }
 
+/* Menu Card  */
+/* ===========*/
 .card-menu {
+  /*    
+      display: flex;
+
+      width: 95%;
+      background-color: rgba(255, 255, 255, 0.823);
+      border-radius: 10px;
+
+       margin: 20px auto;
+
+      box-shadow: 0px 0px 10px 8px #CDCDCD;
+
+      padding-left: 8px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      margin-bottom:0;
+
+  */
   display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
   width: 95%;
   background-color: rgba(255, 255, 255, 0.823);
   border-radius: 10px;
-  margin: 20px auto;
   box-shadow: 0px 0px 10px 8px #CDCDCD;
-  padding-left: 8px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  margin-bottom: 0;
+  margin: 20px auto;
+  overflow: hidden;
+  height: 10vh;
+  /* Menu Card Text */
+  /* ============== */
+  /* Menu Card Price */
+  /* =============== */
+  /* Menu Card Coche  */
+  /* ================ */
+  /* Menu Card Events */
+  /* ================ */
 }
 .card-menu .card-txt {
   width: 60%;
+  margin-left: 10px;
 }
 .card-menu .card-txt h6 {
   margin: 0;
   padding: 0;
   font-size: 18px;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card-menu .card-txt p {
   margin: 0;
   padding: 0;
   font-size: 14px;
+  opacity: 0.6;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card-menu .card-price {
-  width: 40%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
+  width: 20%;
+  height: 100%;
+  display: inline-block;
   font-weight: bold;
-  padding-right: 8px;
+  font-size: 14px;
+  position: relative;
+}
+.card-menu .card-price .price_number {
+  position: absolute;
+  bottom: 15%;
+  right: -40%;
+}
+.card-menu .icon-coche {
+  font-size: 22px;
 }
 .card-menu .coche {
-  display: none;
+  /* width:20%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #99E2D0;
+  opacity: 0;
+  width: 20%;
+}
+.card-menu .coche .coche-fill {
+  color: white;
+}
+.card-menu:hover .card-price {
+  width: 20%;
+  transform: translateX(-60%);
+}
+.card-menu:hover .coche {
+  opacity: 1;
+}
+.card-menu:hover .icon-coche {
+  animation: 0.5s k-tour;
 }
 
 .btn-menu {
@@ -416,6 +497,113 @@ header div a i {
   width: 50px;
   height: 7px;
   border-bottom: 4px solid #99E2D0;
+}
+
+@keyframes k-tour {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.anim-carte-1 {
+  animation: k-anim-carte 1.5s 200ms;
+}
+
+.anim-carte-2 {
+  animation: k-anim-carte 2s 200ms;
+}
+
+.anim-carte-3 {
+  animation: k-anim-carte 3s 200ms;
+}
+
+.anim-carte-4 {
+  animation: k-anim-carte 1.5s 100ms;
+}
+
+.anim-carte-5 {
+  animation: k-anim-carte 2s 100ms;
+}
+
+.anim-carte-6 {
+  animation: k-anim-carte 3s 100ms;
+}
+
+.anim-carte-7 {
+  animation: k-anim-carte 1.5s;
+}
+
+.anim-carte-8 {
+  animation: k-anim-carte 2s;
+}
+
+.anim-carte-9 {
+  animation: k-anim-carte 3s;
+}
+
+@keyframes k-anim-carte {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.anim_page_main {
+  animation: k-load_page_main 4s;
+}
+
+.anim_main_load {
+  animation: k-load 5s;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  opacity: 0;
+  z-index: 111150;
+}
+.anim_main_load .main_load_spin {
+  animation: k-spiner 5s;
+  position: absolute;
+  display: flex;
+  width: 25vw;
+  height: 25vh;
+  border-radius: 12px 12px 12px 12px;
+  background-color: #99E2D0;
+  align-items: center;
+  justify-content: center;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 12px;
+}
+
+@keyframes k-load_page_main {
+  0%, 80% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes k-load {
+  0%, 80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes k-spiner {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

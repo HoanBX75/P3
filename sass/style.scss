@@ -329,22 +329,43 @@ html{
             justify-content: center;
             align-items: center;
             width:25%;
-        
+            
         
             .fill{
+             //    border : $border-greendebug;
                 font-size: 25px;
-                color: black;
+                color: grey;
                 cursor: pointer;
                 margin-right: 15px;
                 line-height: 38px;
+                // opacity:1;
+
                 &:hover{
+
+                    // https://www.w3docs.com/learn-css/text-fill-color.html
+                    // http://jsfiddle.net/DoubleYo/qGfzm/
+                    // https://developer.mozilla.org/fr/docs/Web/CSS/background-clip
+
                     // animation: 5s fill cubic-bezier(0,1.04,.13,-0.94);
                     //  background:linear-gradient(to left, #9356dc, #b35cdc,#cf64dc, #e86edb, #ff79da);
                     // overflow:hidden;
-                    color: #b35cdc;
+                  //    background-color: #b35cdc;
                     
-                    // color:white;
+ 
+     
+         //    animation: 0.3s fill cubic-bezier(0,1.04,.13,-0.94);
+          //  display: inline-block;
+           opacity: 1;
+            background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+          //   background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        //   background: #b35cdc;
+          -webkit-background-clip: text;
+            -webkit-text-fill-color:transparent;
+         font-weight: bold;
+
                 }
+
+               
             }
             }
         
@@ -352,7 +373,7 @@ html{
 }
 
 /* ----------------------------------------------------*/
-/* Footer                                   */
+/* Footer                                              */
 /* ----------------------------------------------------*/
 
 footer {
@@ -378,6 +399,14 @@ footer {
     }
 }
 
+footer .svg-color {
+  // fill: white;
+   width: 100px;
+   stroke: white;
+   
+  }
+
+
 .nav-footer{
   
     width:80%;
@@ -401,8 +430,8 @@ footer {
               }
 
             &:hover {
-             //   color: #99E2D0;
-               transform: scale (1.2);
+               color: $color3;
+               transform: scale (2);
               }
 
             .foot-txt{
@@ -426,6 +455,12 @@ footer {
      top: 5%;
      left: 2%;
  }
+
+.title-site.margin {
+    margin-top: 10px;
+    margin-bottom: 10px;
+   //  border: $border-reddebug;
+}
 
  header div a i {
  font-size: 19px; 
@@ -470,6 +505,8 @@ footer {
         justify-content: flex-start;
         align-items: center;
         margin-left: 20px;
+        font-family: 'Shrikhand', sans-serif;
+
         .heart .fill{
             font-size: 24px;
             margin-left:24px;
@@ -488,49 +525,139 @@ footer {
     }
 }
 
+/* Menu Card  */
+/* ===========*/
+
 .card-menu{
+/*    
     display: flex;
-    // justify-content: space-between;
+   
     width: 95%;
     background-color: rgba(255, 255, 255, 0.823);
     border-radius: 10px;
-   //  height: 60px;
+  
      margin: 20px auto;
     
     box-shadow: 0px 0px 10px 8px #CDCDCD;
-   //  overflow: hidden;
+ 
     padding-left: 8px;
     padding-top: 15px;
     padding-bottom: 15px;
     margin-bottom:0;
+
+*/
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+width: 95%;
+background-color: rgba(255, 255, 255, 0.823);
+border-radius: 10px;
+box-shadow: 0px 0px 10px 8px #CDCDCD;
+margin: 20px auto;
+overflow: hidden;
+height: 10vh;
+
+/* Menu Card Text */
+/* ============== */
+
+
    .card-txt{
-     //   border:$border-greendebug;
+   //  border: $border-reddebug;
        width:60%;
+       margin-left:10px;
+     //  border: $border-debug;
        h6{
            margin:0;
            padding:0;
            font-size: 18px;;
+           margin-bottom: 5px;
+
+          white-space: nowrap;
+           overflow: hidden;
+           text-overflow: ellipsis;
        }
        p{
         margin:0;
         padding:0;
-        font-size: 14px;;
+        font-size: 14px;
+        opacity:0.6;
+     white-space: nowrap;
+       overflow: hidden;
+        text-overflow: ellipsis;
+
        }
    }
-   .card-price{
-    width:40%;
-  //  border:$border-reddebug;
-    display:flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+
+/* Menu Card Price */
+/* =============== */
+
+.card-price{
+    width:20%;
+    height:100%;
+  //   display:flex;
+  //   justify-content: center;
+  //   align-items: center;
+  display: inline-block;
     font-weight: bold;
-    padding-right: 8px;
+  //   padding-right: 8px;
+  //  border: $border-reddebug;
+    font-size: 14px;
+    position: relative;
+    .price_number{
+        position: absolute;
+        bottom:15%;
+        right:-40%;
+    }
    }
+
+/* Menu Card Coche  */
+/* ================ */
+
+   .icon-coche{
+    font-size: 22px;
+   }
+
    .coche{
+    /* width:20%; */
    //  display:none;
-   display:none;
+   // display:none;
+     //  border: $border-reddebug;
+ //  width:20%;
+   display:flex;
+   justify-content: center;
+   align-items: center;
+
+  height: 100%;
+   background-color:  $color3;
+   opacity:0;
+   width : 20%;
+
+      .coche-fill{
+             color: white ;    
+       }
+   } // fin coche 
+
+
+/* Menu Card Events */
+/* ================ */
+
+   &:hover .card-price {
+   //  animation: 2s test2;
+   // border: $border-greendebug;
+    width:20%;
+
+     transform: translateX(-60%);
    }
-}    
+   &:hover .coche{
+    opacity:1;
+   }
+
+   &:hover .icon-coche{
+    animation: 0.5s k-tour;
+   }
+
+}    // fin card menu 
 
 
 // ---------------------------------------------
@@ -556,4 +683,130 @@ footer {
         }
 }
 
+// ---------------------------------------------
+//  Animation:  Menu
+// ---------------------------------------------
 
+@keyframes k-tour {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+
+.anim-carte-1{
+    animation:  k-anim-carte 1.5s 200ms;
+}
+.anim-carte-2{
+    animation:  k-anim-carte 2s 200ms;
+}
+.anim-carte-3{
+    animation: k-anim-carte 3s 200ms;
+}
+
+.anim-carte-4{
+    animation:  k-anim-carte 1.5s 100ms;
+}
+.anim-carte-5{
+    animation:  k-anim-carte 2s  100ms;
+}
+.anim-carte-6{
+    animation: k-anim-carte 3s 100ms;
+}
+
+.anim-carte-7{
+    animation:  k-anim-carte 1.5s;
+}
+.anim-carte-8{
+    animation:  k-anim-carte 2s;
+}
+.anim-carte-9{
+    animation: k-anim-carte 3s ;
+}
+
+
+@keyframes k-anim-carte{
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+
+
+// ---------------------------------------------
+//  Animation:  Home page
+// ---------------------------------------------
+
+.anim_page_main {
+    animation: k-load_page_main 4s;
+}
+
+.anim_main_load{
+    animation: k-load 5s  ; 
+        position:fixed;
+        top:50%;
+        right: 50%;
+     
+        opacity: 0;
+        z-index: 111150;
+
+        .main_load_spin{
+                animation: k-spiner 5s  ;
+                position: absolute;
+                display: flex;
+                //  top: 50%;
+                //  left: 50%;
+                width: 25vw;
+                height: 25vh;
+                border-radius: 12px 12px 12px 12px;
+                background-color: $color3;
+
+                align-items: center;
+                justify-content: center;
+                font-family: 'Shrikhand', sans-serif;
+                font-size: 12px;
+        
+        }
+}
+
+
+@keyframes k-load_page_main {
+    0%,80%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+@keyframes k-load {
+    0%,80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+
+@keyframes k-spiner {
+    0%{
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: rotate(360deg);
+     
+        opacity: 0;
+       
+    }
+}
