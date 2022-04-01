@@ -254,6 +254,14 @@ html {
   line-height: 38px;
 }
 .card .card-description .heart .fill:hover {
+  /* 
+   opacity: 1;
+     background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+  font-weight: bold;
+   */
+  animation: 3s k-anim-heart ease;
   opacity: 1;
   background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
   -webkit-background-clip: text;
@@ -261,6 +269,55 @@ html {
   font-weight: bold;
 }
 
+@keyframes k-anim-heart-ee {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+}
+@keyframes k-anim-heart {
+  0% {
+    opacity: 0.1;
+    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  20% {
+    opacity: 0.5;
+    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  50% {
+    opacity: 0.7;
+    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  80% {
+    opacity: 0.8;
+    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+  100% {
+    opacity: 1;
+    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+}
 /* ----------------------------------------------------*/
 /* Footer                                              */
 /* ----------------------------------------------------*/
@@ -369,103 +426,94 @@ header div a i {
   margin-left: 20px;
 }
 
-/* Menu Card  */
-/* ===========*/
+/* ======================== */
+/* Menu Restaurant : Card  */
+/* ======================== */
 .card-menu {
-  /*    
-      display: flex;
-
-      width: 95%;
-      background-color: rgba(255, 255, 255, 0.823);
-      border-radius: 10px;
-
-       margin: 20px auto;
-
-      box-shadow: 0px 0px 10px 8px #CDCDCD;
-
-      padding-left: 8px;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      margin-bottom:0;
-
-  */
   display: flex;
-  justify-content: center;
+  height: 10vh;
+  justify-content: flex-start;
   align-items: center;
   cursor: pointer;
-  width: 95%;
   background-color: rgba(255, 255, 255, 0.823);
   border-radius: 10px;
   box-shadow: 0px 0px 10px 8px #CDCDCD;
   margin: 20px auto;
   overflow: hidden;
-  height: 10vh;
-  /* Menu Card Text */
-  /* ============== */
-  /* Menu Card Price */
-  /* =============== */
-  /* Menu Card Coche  */
-  /* ================ */
-  /* Menu Card Events */
-  /* ================ */
+  /* Menu   Card : Text */
+  /* =================== */
+  /* ===================== */
+  /* Menu  Card Price */
+  /* ===================== */
+  /* ========================== */
+  /* Menu  Card  : Coche  */
+  /* ============================ */
+  /* ================== */
+  /* Menu Card : Events */
+  /* ================== */
+  /*
+  &:hover .card-txt{    
+      width: 60%;
+  }
+  */
 }
 .card-menu .card-txt {
-  width: 60%;
+  flex: 1 1 0;
   margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 60%;
 }
 .card-menu .card-txt h6 {
   margin: 0;
   padding: 0;
   font-size: 18px;
   margin-bottom: 5px;
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .card-menu .card-txt p {
   margin: 0;
   padding: 0;
   font-size: 14px;
   opacity: 0.6;
+  text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .card-menu .card-price {
   width: 20%;
   height: 100%;
-  display: inline-block;
   font-weight: bold;
   font-size: 14px;
   position: relative;
 }
 .card-menu .card-price .price_number {
   position: absolute;
-  bottom: 15%;
-  right: -40%;
-}
-.card-menu .icon-coche {
-  font-size: 22px;
+  bottom: 25%;
+  right: 30%;
+  font-weight: bold;
 }
 .card-menu .coche {
-  /* width:20%; */
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  flex-basis: 0;
   background-color: #99E2D0;
-  opacity: 0;
-  width: 20%;
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+.card-menu .coche .icon-coche {
+  font-size: 22px;
 }
 .card-menu .coche .coche-fill {
   color: white;
 }
-.card-menu:hover .card-price {
-  width: 20%;
-  transform: translateX(-60%);
-}
 .card-menu:hover .coche {
   opacity: 1;
+  flex-basis: 20%;
 }
 .card-menu:hover .icon-coche {
   animation: 0.5s k-tour;
@@ -508,7 +556,7 @@ header div a i {
   }
 }
 .anim-carte-1 {
-  animation: k-anim-carte 1.5s 200ms;
+  animation: k-anim-carte 1s 200ms;
 }
 
 .anim-carte-2 {
@@ -520,7 +568,7 @@ header div a i {
 }
 
 .anim-carte-4 {
-  animation: k-anim-carte 1.5s 100ms;
+  animation: k-anim-carte 1s 100ms;
 }
 
 .anim-carte-5 {
@@ -532,15 +580,15 @@ header div a i {
 }
 
 .anim-carte-7 {
-  animation: k-anim-carte 1.5s;
+  animation: k-anim-carte 1s 10ms;
 }
 
 .anim-carte-8 {
-  animation: k-anim-carte 2s;
+  animation: k-anim-carte 2s 10ms;
 }
 
 .anim-carte-9 {
-  animation: k-anim-carte 3s;
+  animation: k-anim-carte 3s 10ms;
 }
 
 @keyframes k-anim-carte {

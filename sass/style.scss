@@ -173,8 +173,10 @@ html{
             }
             */
     }
-}
-}
+
+    
+} // end of menu 
+}  // end of Functionalities
 
 /* ----------------------------------------------------*/
 /* Restaurant  section                                 */
@@ -328,16 +330,25 @@ html{
                     
  
      
-         //    animation: 0.3s fill cubic-bezier(0,1.04,.13,-0.94);
+         //    
           //  display: inline-block;
-           opacity: 1;
+          /* 
+          opacity: 1;
             background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-          //   background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-        //   background: #b35cdc;
-          -webkit-background-clip: text;
-            -webkit-text-fill-color:transparent;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
          font-weight: bold;
+          */ 
+            //   background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        //   background: #b35cdc;
 
+             animation: 3s  k-anim-heart ease ;
+             opacity: 1;
+             background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
+          font-weight: bold;
+           
                 }
 
                
@@ -346,6 +357,66 @@ html{
         
     }
 }
+
+
+@keyframes k-anim-heart-ee {
+    from {
+      opacity: 0;
+      
+    }
+    to {
+     
+      opacity: 1;
+      background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   font-weight: bold;
+
+    }
+  }
+  @keyframes k-anim-heart {
+    0%{
+        opacity: 0.1;
+        // font-weight: 400;
+        // background-position: -20px;
+        background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+     font-weight: bold;    }
+    20%{
+        opacity: 0.5;
+       //  background-position: -10px;
+       background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+    font-weight: bold;
+  }
+    50%{
+        opacity: 0.7;
+       //  background-position: 0px;
+       background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+       -webkit-background-clip: text;
+       -webkit-text-fill-color: transparent;
+    font-weight: bold;
+    }
+    80%{
+        opacity: 0.8;
+      //   background-position: 10px;
+      background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+   font-weight: bold;
+    }
+    100%{
+        opacity: 1;
+    //  background-position: 20px;
+    background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+ font-weight: bold;    
+     }
+}
+
 
 /* ----------------------------------------------------*/
 /* Footer                                              */
@@ -421,7 +492,7 @@ footer .svg-color {
 
 
 // ---------------------------------------------
-//  Menu: header   
+//  Menu Restaurant : header   
 // ---------------------------------------------
 
  header div a {
@@ -442,7 +513,7 @@ footer .svg-color {
 }
 
 // ---------------------------------------------
-//  Menu: Image Restaurant   
+//  Menu Restaurant : Image    
 // ---------------------------------------------
 
 
@@ -456,7 +527,7 @@ footer .svg-color {
 } 
 
 // ---------------------------------------------
-//  Menu: Restaurant section  
+//  Menu  Restaurant :  Section  
 // ---------------------------------------------
 
 .translation{
@@ -500,137 +571,139 @@ footer .svg-color {
     }
 }
 
-/* Menu Card  */
-/* ===========*/
+/* ======================== */
+/* Menu Restaurant : Card  */
+/* ======================== */
 
 .card-menu{
-/*    
+
     display: flex;
+   //  flex:1 1 0;
+   // flex:1 1 0;
+      //  width: 95%;
+   height: 10vh;
+    
+    justify-content: flex-start;
+    align-items: center;
    
-    width: 95%;
+    cursor: pointer;
+
+
     background-color: rgba(255, 255, 255, 0.823);
     border-radius: 10px;
-  
-     margin: 20px auto;
-    
     box-shadow: 0px 0px 10px 8px #CDCDCD;
- 
-    padding-left: 8px;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    margin-bottom:0;
 
-*/
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
-width: 95%;
-background-color: rgba(255, 255, 255, 0.823);
-border-radius: 10px;
-box-shadow: 0px 0px 10px 8px #CDCDCD;
-margin: 20px auto;
-overflow: hidden;
-height: 10vh;
+     margin: 20px auto;
+    overflow: hidden;
+   
 
-/* Menu Card Text */
-/* ============== */
+    /* Menu   Card : Text */
+    /* =================== */
 
+    .card-txt{
+           // border: $border-reddebug;
 
-   .card-txt{
-   //  border: $border-reddebug;
-       width:60%;
-       margin-left:10px;
-     //  border: $border-debug;
-       h6{
-           margin:0;
-           padding:0;
-           font-size: 18px;;
-           margin-bottom: 5px;
+            flex: 1 1 0 ;
+            margin-left:10px;
+            margin-top: 10px;;
+            margin-bottom: 10px;;
+            width: 60%;
+           
 
-          white-space: nowrap;
-           overflow: hidden;
-           text-overflow: ellipsis;
-       }
-       p{
-        margin:0;
-        padding:0;
+            h6{
+               
+                margin:0;
+                padding:0;
+                font-size: 18px;;
+                margin-bottom: 5px;
+                text-overflow: ellipsis;
+                 white-space: nowrap;
+                overflow: hidden;
+            }
+            p{
+               
+                margin:0;
+                padding:0;
+                font-size: 14px;
+                opacity:0.6;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+              
+
+            }
+   }
+
+    /* ===================== */
+    /* Menu  Card Price */
+    /* ===================== */
+
+    .card-price{
+        // border: $border-debug;
+        width: 20%;
+        height:100%;
+        
+        font-weight: bold;
         font-size: 14px;
-        opacity:0.6;
-     white-space: nowrap;
-       overflow: hidden;
-        text-overflow: ellipsis;
+       // padding:10px;
+      
+        position: relative;
 
-       }
-   }
+        .price_number{
+         // border: $border-debug;
 
-/* Menu Card Price */
-/* =============== */
-
-.card-price{
-    width:20%;
-    height:100%;
-  //   display:flex;
-  //   justify-content: center;
-  //   align-items: center;
-  display: inline-block;
-    font-weight: bold;
-  //   padding-right: 8px;
-  //  border: $border-reddebug;
-    font-size: 14px;
-    position: relative;
-    .price_number{
-        position: absolute;
-        bottom:15%;
-        right:-40%;
+            position: absolute;
+             bottom: 25%;
+             right:  30%;
+             font-weight: bold;
+        }
     }
-   }
 
-/* Menu Card Coche  */
-/* ================ */
+    /* ========================== */
+    /* Menu  Card  : Coche  */
+    /* ============================ */
 
-   .icon-coche{
-    font-size: 22px;
-   }
+    .coche{
 
-   .coche{
-    /* width:20%; */
-   //  display:none;
-   // display:none;
-     //  border: $border-reddebug;
- //  width:20%;
-   display:flex;
-   justify-content: center;
-   align-items: center;
+       //  border: $border-greendebug;
 
-  height: 100%;
-   background-color:  $color3;
-   opacity:0;
-   width : 20%;
+        height: 100%;
 
-      .coche-fill{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-basis: 0;
+
+        background-color:  $color3;
+         overflow: hidden;
+         transition: all ease 0.5s;
+
+        .icon-coche{
+            font-size: 22px;
+        }
+
+        .coche-fill{
              color: white ;    
-       }
-   } // fin coche 
+        }
+    } // fin coche 
 
+    /* ================== */
+    /* Menu Card : Events */
+    /* ================== */
+    /*
+    &:hover .card-txt{    
+        width: 60%;
+    }
+    */
 
-/* Menu Card Events */
-/* ================ */
+    &:hover .coche{
+        opacity:1;
+        flex-basis:20%;
+    }
 
-   &:hover .card-price {
-   //  animation: 2s test2;
-   // border: $border-greendebug;
-    width:20%;
-
-     transform: translateX(-60%);
-   }
-   &:hover .coche{
-    opacity:1;
-   }
-
-   &:hover .icon-coche{
-    animation: 0.5s k-tour;
-   }
+    &:hover .icon-coche{
+          animation: 0.5s k-tour;
+    }
 
 }    // fin card menu 
 
@@ -672,35 +745,31 @@ height: 10vh;
 }
 
 
-.anim-carte-1{
-    animation:  k-anim-carte 1.5s 200ms;
+
+
+@function  menuCarteDuration($num) {
+    @return (($num % 3) + 1) ;
 }
-.anim-carte-2{
-    animation:  k-anim-carte 2s 200ms;
-}
-.anim-carte-3{
-    animation: k-anim-carte 3s 200ms;
+@function  menuCarteId($num) {
+    @return ($num  + 1) ;
 }
 
-.anim-carte-4{
-    animation:  k-anim-carte 1.5s 100ms;
-}
-.anim-carte-5{
-    animation:  k-anim-carte 2s  100ms;
-}
-.anim-carte-6{
-    animation: k-anim-carte 3s 100ms;
-}
 
-.anim-carte-7{
-    animation:  k-anim-carte 1.5s;
-}
-.anim-carte-8{
-    animation:  k-anim-carte 2s;
-}
-.anim-carte-9{
-    animation: k-anim-carte 3s ;
-}
+@mixin generate-anim-Menucartes($Menucartes) {
+    @each $id, $delay in $Menucartes{
+        .anim-carte-#{menuCarteId($id)}{
+            animation:  k-anim-carte #{menuCarteDuration($id)}s   $delay ;
+        }
+    }
+  }
+
+
+  $Menucartes-id : (0,200ms), (1,200ms),(2,200ms),
+                    (3,100ms), (4,100ms), (5,100ms) ,
+                    (6,10ms) ,(7,10ms), (8,10ms);
+
+@include generate-anim-Menucartes ($Menucartes-id);  
+ 
 
 
 @keyframes k-anim-carte{
