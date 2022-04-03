@@ -92,10 +92,10 @@ html{
 /* ----------------------------------------------------*/
 
 .Functionalities{
-     border: $border-reddebug;
+   //  border: $border-reddebug;
   
     h2{
-        width: 80%;
+        width: 96%;
         margin:auto;
       //  border: $border-debug;
  
@@ -107,7 +107,7 @@ html{
 
     .menu{
        //  border: $border-debug;
-        width: 80%;
+        width: 96%;
        padding:0;
         margin:auto;
 
@@ -195,8 +195,9 @@ html{
     background-color: rgb(233, 233, 233);
     //gap: 15px;
     padding-bottom: 70px;
+
     .title-restaurant{
-        width: 80%;
+        width: 96%;
         padding:0;
         margin:auto;
         display: flex;
@@ -229,10 +230,10 @@ html{
     box-shadow: 1px 7px 15px -3px rgba(74,74,74,0.6);
     overflow: hidden;
     margin: 0 auto;
-    width: 90%;
+    width: 96%;
     transition: 0.2s ease-in-out;
 
-    width: 80%;
+   
     padding:0;
     margin:auto;
     margin-bottom:30px;
@@ -452,7 +453,7 @@ footer {
 
 .title-site_footer{
   //  border: $border-debug;
-    width:80%;
+    width:96%;
     margin:auto;
     margin-top:15px;
    
@@ -474,7 +475,7 @@ footer .svg-color {
 
 .nav-footer{
   
-    width:80%;
+    width:96%;
     margin:auto;
     ul {
         display: flex;
@@ -519,6 +520,9 @@ footer .svg-color {
 // ---------------------------------------------
 //  Menu Restaurant : header   
 // ---------------------------------------------
+.menu_main{
+    margin:auto;
+}
 
  header div a {
      // margin-right:30px;
@@ -622,7 +626,7 @@ footer .svg-color {
 
      margin: 20px auto;
     overflow: hidden;
-     
+    width:96%;
 
     /* Menu   Card : Text */
     /* =================== */
