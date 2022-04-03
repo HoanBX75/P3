@@ -79,6 +79,9 @@ html {
 /* ----------------------------------------------------*/
 /* Functionalities section                             */
 /* ----------------------------------------------------*/
+.Functionalities {
+  border: 1px solid red;
+}
 .Functionalities h2 {
   width: 80%;
   margin: auto;
@@ -90,6 +93,7 @@ html {
   width: 80%;
   padding: 0;
   margin: auto;
+  /* --------------------*/
 }
 .Functionalities .menu .menu-flex {
   position: relative;
@@ -108,12 +112,6 @@ html {
   /* Transitions event */
   /* Number */
   /* Icon */
-  /*
-  .text-fonction{
-      border: $border-debug;
-
-  }
-  */
 }
 .Functionalities .menu .menu-flex:hover {
   background: #9256dc2e;
@@ -142,6 +140,16 @@ html {
 .Functionalities .menu .menu-flex .icon-fonction {
   margin: 0 20px;
 }
+@media all and (min-width: 769px) {
+  .Functionalities .menu {
+    display: flex;
+    flex-direction: row;
+  }
+  .Functionalities .menu .menu-flex {
+    margin-right: 50px;
+    white-space: nowrap;
+  }
+}
 
 /* ----------------------------------------------------*/
 /* Restaurant  section                                 */
@@ -163,6 +171,18 @@ html {
 }
 .restaurant .title-restaurant h2 {
   font-size: 22px;
+}
+@media all and (min-width: 769px) {
+  .restaurant .liste_restaurants {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .restaurant .liste_restaurants .title-restaurant {
+    grid-column: span 2;
+  }
+  .restaurant .liste_restaurants .card img {
+    object-position: 50%;
+  }
 }
 
 .card {
@@ -370,6 +390,13 @@ footer .svg-color {
 .nav-footer ul a .foot-txt {
   font-size: 15px;
 }
+@media all and (min-width: 769px) {
+  .nav-footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
 
 header div a {
   position: absolute;
@@ -429,7 +456,7 @@ header div a i {
 /* ======================== */
 /* Menu Restaurant : Card  */
 /* ======================== */
-.card-menu {
+.menu-restaurant .card-menu {
   display: flex;
   height: 10vh;
   justify-content: flex-start;
@@ -457,14 +484,14 @@ header div a i {
   }
   */
 }
-.card-menu .card-txt {
+.menu-restaurant .card-menu .card-txt {
   flex: 1 1 0;
   margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
   width: 60%;
 }
-.card-menu .card-txt h6 {
+.menu-restaurant .card-menu .card-txt h6 {
   margin: 0;
   padding: 0;
   font-size: 18px;
@@ -473,7 +500,7 @@ header div a i {
   white-space: nowrap;
   overflow: hidden;
 }
-.card-menu .card-txt p {
+.menu-restaurant .card-menu .card-txt p {
   margin: 0;
   padding: 0;
   font-size: 14px;
@@ -482,20 +509,20 @@ header div a i {
   white-space: nowrap;
   overflow: hidden;
 }
-.card-menu .card-price {
+.menu-restaurant .card-menu .card-price {
   width: 20%;
   height: 100%;
   font-weight: bold;
   font-size: 14px;
   position: relative;
 }
-.card-menu .card-price .price_number {
+.menu-restaurant .card-menu .card-price .price_number {
   position: absolute;
   bottom: 25%;
   right: 30%;
   font-weight: bold;
 }
-.card-menu .coche {
+.menu-restaurant .card-menu .coche {
   height: 100%;
   display: flex;
   justify-content: center;
@@ -505,18 +532,29 @@ header div a i {
   overflow: hidden;
   transition: all ease 0.5s;
 }
-.card-menu .coche .icon-coche {
+.menu-restaurant .card-menu .coche .icon-coche {
   font-size: 22px;
 }
-.card-menu .coche .coche-fill {
+.menu-restaurant .card-menu .coche .coche-fill {
   color: white;
 }
-.card-menu:hover .coche {
+.menu-restaurant .card-menu:hover .coche {
   opacity: 1;
   flex-basis: 20%;
 }
-.card-menu:hover .icon-coche {
+.menu-restaurant .card-menu:hover .icon-coche {
   animation: 0.5s k-tour;
+}
+@media all and (min-width: 769px) {
+  .menu-restaurant {
+    /*
+        display:grid;
+        grid-template: 1fr 1fr 1fr;
+    */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3%;
+  }
 }
 
 .btn-menu {

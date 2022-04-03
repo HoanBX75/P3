@@ -92,7 +92,7 @@ html{
 /* ----------------------------------------------------*/
 
 .Functionalities{
-    // border: $border-reddebug;
+     border: $border-reddebug;
   
     h2{
         width: 80%;
@@ -169,9 +169,18 @@ html{
     }
 
     /* --------------------*/
-
+    @media all and (min-width: 769px){
+        display:flex;
+        flex-direction: row;
+        .menu-flex{
+            margin-right: 50px;
+            white-space: nowrap;
+        }
+    }    
+    
 
 } // end of menu 
+
 
 }  // end of Functionalities
 
@@ -198,6 +207,19 @@ html{
        h2 {
            font-size: 22px;
        }
+    }
+
+    @media all and (min-width: 769px){
+        .liste_restaurants{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            .title-restaurant{
+                grid-column: span 2;
+            }
+            .card img{
+                object-position: 50%;
+            }
+        }       
     }
 }
 
@@ -429,11 +451,11 @@ footer {
 
 
 .title-site_footer{
-   
+  //  border: $border-debug;
     width:80%;
     margin:auto;
     margin-top:15px;
-   //  border: $border-debug;
+   
    img{
     // border: $border-debug;
     width: 30%;
@@ -482,8 +504,14 @@ footer .svg-color {
             }  
           }
         
+        @media all and (min-width: 769px){
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+  
+
       }
-    
 
 }
 
@@ -572,6 +600,8 @@ footer .svg-color {
 /* Menu Restaurant : Card  */
 /* ======================== */
 
+.menu-restaurant{
+
 .card-menu{
 
     display: flex;
@@ -584,7 +614,7 @@ footer .svg-color {
     align-items: center;
    
     cursor: pointer;
-
+    
 
     background-color: rgba(255, 255, 255, 0.823);
     border-radius: 10px;
@@ -592,7 +622,7 @@ footer .svg-color {
 
      margin: 20px auto;
     overflow: hidden;
-   
+     
 
     /* Menu   Card : Text */
     /* =================== */
@@ -703,6 +733,20 @@ footer .svg-color {
     }
 
 }    // fin card menu 
+
+@media all and (min-width: 769px){
+/*
+    display:grid;
+    grid-template: 1fr 1fr 1fr;
+*/
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+gap:3%;
+}
+
+
+} // fin menu restaurant 
+
 
 
 // ---------------------------------------------
