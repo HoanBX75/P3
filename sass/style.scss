@@ -13,6 +13,9 @@ html{
     background-color: #fff;
 }
 
+body {
+    margin:0;
+}
 /* ----------------------------------------------------*/
 /* Site title header                                   */
 /* ----------------------------------------------------*/
@@ -25,8 +28,10 @@ html{
 }
 
 .title-site img{
-    // border: $border-debug;
-    width:30%;
+   // border: $border-debug;
+    width:40%;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 
@@ -35,54 +40,96 @@ html{
 /* ----------------------------------------------------*/
 
 .Formulaire{
-    margin-top: 10px;
-    margin-bottom: 20px;
+   
+   
 }
 
 .form-OMF{
      text-align: center;
+     padding-bottom: 80px;
     
-    height: 280px;
+
+   //  height: 45vh;
     background-color: rgba(233, 233, 233, 0.522);
 
+
+    // ============
+    // INPUT 
+     // ============
+
     .search-ville{
-      //   border: $border-reddebug;
-      //   border: $border-debug;
+        // border: $border-reddebug;
+     
         width:100%;
-        height: 40px;
+         height: 60px;
         border-top: 2px solid rgba(128, 128, 128, 0.33);
         background-color: rgb(233, 233, 233);
+
+       // ICON MAP MARKER 
+
+       .my-map-marker {
+           font-size: 18px;
+       }
+
+       
+         // INPUT 
         input{
-            // border: $border-reddebug;
-         height: 100%;
+          
+           height: 100%;
            border: none;
           
            background-color: rgb(233, 233, 233);
           
             padding-left: 15px;
+            font-size: 16px;
             &:focus{
                 outline: none;
             }
             &::placeholder{
                 color: black;
-                font-size: 14px;
-              //  opacity: 0.8;
-                font-weight: 600;
+                font-size: 16px;
+                opacity: 0.8;
+                font-weight: 550;
             }
         }
     }
 
+    // ============
+    // FORM TEXTE 
+    // ============
     .form-txt{
+  
+       
+//  border: $border-debug;
         width: 100%;
+        padding-top: 25px;
+        padding-bottom: 25px;
+
+        h2 {
+           //  border: $border-debug;
+            padding-left: 40px;
+            padding-right: 40px;   
+            font-size: 25px;
+            font-weight: bold;
+        }
     //   padding: 30px 45px;
         p{
-            opacity: 0.6;
+            padding-left: 25px;
+            padding-right: 25px;
+            font-size: 20px;
+            font-weight:lighter;
+
+            // opacity: 0.6;
             margin-top: 15px;
            //  border: $border-reddebug;
         }
         
     }
+
+    // Button 
+
     .btn-form{
+        
         @include btn-OMF;
     }
 }
@@ -92,23 +139,26 @@ html{
 /* ----------------------------------------------------*/
 
 .Functionalities{
-   //  border: $border-reddebug;
-  
+  //   border: $border-reddebug;
+    padding-top: 50px;
+    padding-bottom: 50px; 
+
     h2{
         width: 96%;
         margin:auto;
       //  border: $border-debug;
  
         font-weight: bolder;
-        font-size: 22px;
+        font-size: 23px;
        //  margin: 40px 0 30px 40px;
        margin-bottom: 30px;
     }
 
     .menu{
-       //  border: $border-debug;
-        width: 96%;
-       padding:0;
+         // border: $border-debug;
+       //  width: 96%;
+       gap:30px;
+       padding:0 30px;
         margin:auto;
 
         .menu-flex{
@@ -118,14 +168,16 @@ html{
             font-weight: bold;
             cursor: pointer;
             border-radius: 20px;
-            height: 65px;
-            line-height: 65px;
+           // xxx  height: 65px;
+           // xxx line-height: 65px;
             margin-bottom: 25px;
             width: 100%;
             list-style: none;
             display: flex;
             transition: 0.3s ease-in-out;
-
+             padding-top: 30px;
+             padding-bottom: 30px;
+             padding-right: 20px;
             /* Transitions event */
             &:hover {
                 background: #9256dc2e;
@@ -139,23 +191,24 @@ html{
             .number-fonction{
                 // border: $border-debug;
                 position: absolute;
-                top: 22.5px;
+                top: 30px;
                 left:0px;
                 left: -10px;
                 border-radius: 20px; 
+                line-height: 63px;
                //  border-radius: 900px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
                 color: #fff;
                 font-weight: lighter;
                 background-color:  $color1;
-             
+                ;
                 span{
-                    font-size: 12px;
+                    font-size: 20px;
                     
                     position: absolute;
-                    top: -22px;
-                    left: 7px;
+                    top: -17px;
+                    left: 9px;
                 
                 }
               
@@ -163,18 +216,26 @@ html{
             }
             /* Icon */
             .icon-fonction{
-                margin: 0 20px;
-               
+               //  border: $border-debug;
+                margin: 0 40px;
+               .my_icon_size{
+                   font-size: 22px;
+               }
             }
+            .text-fonction {
+                font-size: 16px;
+            }       
     }
 
     /* --------------------*/
     @media all and (min-width: 769px){
         display:flex;
         flex-direction: row;
+       //  display: grid;
+       //  grid-template-columns: 1fr 1fr 1fr;
         .menu-flex{
-            margin-right: 50px;
-            white-space: nowrap;
+            // margin-right: 50px;
+           //  white-space: nowrap;
         }
     }    
     
@@ -194,11 +255,14 @@ html{
     flex-direction: column;
     background-color: rgb(233, 233, 233);
     //gap: 15px;
-    padding-bottom: 70px;
+   padding-bottom: 70px;
 
     .title-restaurant{
+       //  border: $border-debug;
         width: 96%;
         padding:0;
+        padding-top: 50px;
+        padding-bottom: 20px;
         margin:auto;
         display: flex;
         flex-direction: column;
@@ -206,7 +270,9 @@ html{
         height: 80px;
         
        h2 {
+       //  border: $border-debug;
            font-size: 22px;
+           
        }
     }
 
@@ -217,9 +283,11 @@ html{
             .title-restaurant{
                 grid-column: span 2;
             }
+/*
             .card img{
                 object-position: 50%;
             }
+*/
         }       
     }
 }
@@ -262,13 +330,18 @@ html{
         }
     
         .nouveau-restaurant{
-            font-size: 15px;
+           //  border:$border-debug;
+            font-size: 16px;
+            font-weight: bolder;
             color: #2d806b;
             border-radius: 3px;
-            text-align: center;
-            line-height: 30px;
+          //   text-align: center;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+           //  line-height: 30px;
             position: absolute;
-            width: 80px;
+            width: 75px;
             height: 30px;
             top: 5%;
             right: 5%;
@@ -289,14 +362,15 @@ html{
 
 
         .card-title {
-            height:10vh;
+            // height:10vh;
         // border: $border-greendebug;
             display: flex;
             flex-direction: column;
-            padding:0;
-            padding-left:15px;
+            padding: 10px 15px 15px 15px ;
+           //  padding-left:15px;
             justify-content: center;
             margin:0;
+            
           
             color: black;
 
@@ -305,7 +379,7 @@ html{
             .card-name{
                 margin:0p;
                 margin-top:10px;
-                font-size:  16px;
+                font-size:  20px;
                 font-weight: bolder;
                 margin-bottom:5px;
             }
@@ -313,7 +387,7 @@ html{
             .card-location{
                 margin:0px;
                 margin-bottom:3px;
-                font-size:  14px;
+                font-size:  15px;
             
             }
 
@@ -325,13 +399,15 @@ html{
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            width:25%;
+            padding-right: 15px;
+          //   width:25%;
             
         
             .fill{
              //    border : $border-greendebug;
                 font-size: 25px;
-                color: grey;
+                color: black;
+               
                 cursor: pointer;
                 margin-right: 15px;
                 line-height: 38px;
@@ -362,7 +438,7 @@ html{
             //   background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
         //   background: #b35cdc;
 
-             animation: 3s  k-anim-heart ease ;
+             animation: 2s  k-anim-heart ease ;
              opacity: 1;
              background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
              -webkit-background-clip: text;
@@ -453,8 +529,10 @@ footer {
 
 .title-site_footer{
   //  border: $border-debug;
-    width:96%;
-    margin:auto;
+   //  width:100%;
+    margin-left:20px; 
+    margin-right:20px;
+   //  margin:auto;
     margin-top:15px;
    
    img{
@@ -475,8 +553,12 @@ footer .svg-color {
 
 .nav-footer{
   
-    width:96%;
-    margin:auto;
+   // width:96%;  xxxxx mettre un padding 
+   // width:100%;
+   margin-left:20px; 
+    margin-right:20px;
+
+    // margin:auto;
     ul {
         display: flex;
         flex-direction: column;
@@ -562,6 +644,7 @@ footer .svg-color {
 .translation{
     transform: translateY(-35px);
 }
+
 .name-restaurant{
     height: auto;
     background-color: rgb(233, 233, 233);
@@ -573,29 +656,42 @@ footer .svg-color {
     padding-bottom: 35px;
 
     .title-menu{
-        
+        margin-left:20px; 
+    margin-right:20px;
         display:flex;
         flex-direction: row;
          
-        justify-content: flex-start;
+        justify-content:space-between;
         align-items: center;
-        margin-left: 20px;
+      //   margin-left: 20px;
         font-family: 'Shrikhand', sans-serif;
 
         .heart .fill{
-            font-size: 24px;
-            margin-left:24px;
+            font-size: 25px;
+            margin-right:24px;
+            color: black;
+
         }
+    }
+
+    h2 {
+        font-size: 25px;
+        font-weight:600;;
     }
 
 
     h3{
+    
+      //   border: 1px solid red;
+        margin-left:20px; 
+        margin-right:20px;
         text-transform: uppercase;
         font-weight: lighter;
+       //   font-size: 50px;
         opacity: 0.5;
       //  padding-left: 15px;
       //   padding-top: 20px;
-       margin-left: 20px;
+        // margin-left: 20px;
         
     }
 }
@@ -607,15 +703,21 @@ footer .svg-color {
 .menu-restaurant{
 
 .card-menu{
-
+ //   border: 1px solid red;
+   //  width:96%;
     display: flex;
+    justify-content: flex-start;
+    align-items: center;
    //  flex:1 1 0;
    // flex:1 1 0;
       //  width: 95%;
-   height: 10vh;
-    
-    justify-content: flex-start;
-    align-items: center;
+
+      height: 70px;  
+     // XXXXX 
+    margin-left:20px; 
+    margin-right:20px;
+    margin-bottom: 20px;
+   // margin: 20px auto;
    
     cursor: pointer;
     
@@ -624,9 +726,9 @@ footer .svg-color {
     border-radius: 10px;
     box-shadow: 0px 0px 10px 8px #CDCDCD;
 
-     margin: 20px auto;
+   
     overflow: hidden;
-    width:96%;
+   
 
     /* Menu   Card : Text */
     /* =================== */
@@ -745,7 +847,7 @@ footer .svg-color {
 */
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
-gap:3%;
+// gap:3%;
 }
 
 
@@ -798,6 +900,7 @@ gap:3%;
 @function  menuCarteId($num) {
     @return ($num  + 1) ;
 }
+
 
 
 @mixin generate-anim-Menucartes($Menucartes) {
