@@ -826,18 +826,36 @@ grid-template-columns: 1fr 1fr 1fr;
 
 .underline {
     position: relative;
-   //  border:$border-debug;
+    //  border:$border-debug;
     .line{
         width: 50px;
         height: 7px;
         border-bottom: 4px solid $color3;
        
-      //   border:$border-reddebug;
+       //  border:$border-reddebug;
         }
 }
 
+
+
+.name-restaurant{
+    h3{
+      //  border:$border-debug;
+      position: relative;
+      &::before{
+      //   border:$border-reddebug;
+        position: absolute;
+        content: "";
+        background-color: $color3;
+        width: 45px;
+        height: 3px;
+        bottom: -5px;
+      }
+    } 
+  }
+
 // ---------------------------------------------
-//  Animation:  Menu
+//  Animation:  Menu 
 // ---------------------------------------------
 
 @keyframes k-tour {

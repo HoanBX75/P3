@@ -647,6 +647,18 @@ header div a i {
   border-bottom: 4px solid #99E2D0;
 }
 
+.name-restaurant h3 {
+  position: relative;
+}
+.name-restaurant h3::before {
+  position: absolute;
+  content: "";
+  background-color: #99E2D0;
+  width: 45px;
+  height: 3px;
+  bottom: -5px;
+}
+
 @keyframes k-tour {
   0% {
     transform: rotate(0deg);
