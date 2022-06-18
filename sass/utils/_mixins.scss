@@ -1,4 +1,6 @@
 
+// BUTTON
+
 @mixin btn-OMF{
     border-radius: 40px;
     // width: 200px;
@@ -12,7 +14,7 @@
  //  background-color: $color1;
   color: white;
    //  font-weight: 600;
-    font-size: 18px;
+    font-size: $fs-button-txt;
   //  box-shadow: 1px 7px 15px -3px rgba(74,74,74,0.9);
     transition: 0.3s linear;
     &:hover{
@@ -20,4 +22,49 @@
         cursor: pointer;
         transform: scale(1.02);
     }
+}
+
+// HEART
+
+@mixin heart-OMF {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-right: 15px;
+//   width:25%;
+  
+
+  .fill{
+   //    border : $border-greendebug;
+      font-size: $fs-restaurant-heart;
+      color: black;
+     
+      cursor: pointer;
+      margin-right: 15px;
+      line-height: 38px;
+      // opacity:1;
+
+      &:hover{
+
+          // https://www.w3docs.com/learn-css/text-fill-color.html
+          // http://jsfiddle.net/DoubleYo/qGfzm/
+          // https://developer.mozilla.org/fr/docs/Web/CSS/background-clip
+
+          // animation: 5s fill cubic-bezier(0,1.04,.13,-0.94);
+          //  background:linear-gradient(to left, #9356dc, #b35cdc,#cf64dc, #e86edb, #ff79da);
+          // overflow:hidden;
+        //    background-color: #b35cdc;
+          
+
+          animation: 2s  k-anim-heart ease ;
+          opacity: 1;
+          background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          font-weight: bold;
+      }
+
+     
+  }
 }

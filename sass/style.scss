@@ -24,8 +24,18 @@ body {
     position:relative;
     display:flex;
     justify-content:center;
-   //  border: $border-debug;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    // border: $border-debug;
 }
+
+/*
+.title-site.margin {
+
+     
+}
+
+
 
 .title-site img{
    // border: $border-debug;
@@ -33,16 +43,12 @@ body {
     margin-top: 25px;
     margin-bottom: 25px;
 }
-
+*/
 
 /* ----------------------------------------------------*/
 /* form section                                        */
 /* ----------------------------------------------------*/
 
-.Formulaire{
-   
-   
-}
 
 .form-OMF{
      text-align: center;
@@ -55,7 +61,7 @@ body {
 
     // ============
     // INPUT 
-     // ============
+    // ============
 
     .search-ville{
         // border: $border-reddebug;
@@ -68,7 +74,7 @@ body {
        // ICON MAP MARKER 
 
        .my-map-marker {
-           font-size: 18px;
+           font-size: $fs-search-map-marker;
        }
 
        
@@ -81,13 +87,13 @@ body {
            background-color: rgb(233, 233, 233);
           
             padding-left: 15px;
-            font-size: 16px;
+            font-size: $fs-search-input-txt;
             &:focus{
                 outline: none;
             }
             &::placeholder{
                 color: black;
-                font-size: 16px;
+                font-size: $fs-search-input-txt;
                 opacity: 0.8;
                 font-weight: 550;
             }
@@ -105,18 +111,19 @@ body {
         padding-top: 25px;
         padding-bottom: 25px;
 
+      //   title  form 
         h2 {
-           //  border: $border-debug;
+           // border: $border-debug;
             padding-left: 40px;
             padding-right: 40px;   
-            font-size: 25px;
+            font-size: $fs-form-title;
             font-weight: bold;
         }
-    //   padding: 30px 45px;
+        //   text form
         p{
             padding-left: 25px;
             padding-right: 25px;
-            font-size: 20px;
+            font-size: $fs-form-txt;
             font-weight:lighter;
 
             // opacity: 0.6;
@@ -144,12 +151,13 @@ body {
     padding-bottom: 50px; 
 
     h2{
-        width: 96%;
+        // width: 96%;
+        padding:0 30px;
         margin:auto;
       //  border: $border-debug;
  
         font-weight: bolder;
-        font-size: 23px;
+        font-size: $fs-fonction-title;
        //  margin: 40px 0 30px 40px;
        margin-bottom: 30px;
     }
@@ -204,7 +212,7 @@ body {
                 background-color:  $color1;
                 ;
                 span{
-                    font-size: 20px;
+                    font-size: $fs-fonction-number;
                     
                     position: absolute;
                     top: -17px;
@@ -219,11 +227,11 @@ body {
                //  border: $border-debug;
                 margin: 0 40px;
                .my_icon_size{
-                   font-size: 22px;
+                   font-size: $fs-fonction-icon;
                }
             }
             .text-fonction {
-                font-size: 16px;
+                font-size: $fs-fonction-txt;
             }       
     }
 
@@ -233,10 +241,7 @@ body {
         flex-direction: row;
        //  display: grid;
        //  grid-template-columns: 1fr 1fr 1fr;
-        .menu-flex{
-            // margin-right: 50px;
-           //  white-space: nowrap;
-        }
+
     }    
     
 
@@ -249,211 +254,168 @@ body {
 /* Restaurant  section                                 */
 /* ----------------------------------------------------*/
 
+
 .restaurant{
-  //   border: $border-debug;
-    display: flex;
-    flex-direction: column;
-    background-color: rgb(233, 233, 233);
-    //gap: 15px;
-   padding-bottom: 70px;
-
-    .title-restaurant{
-       //  border: $border-debug;
-        width: 96%;
-        padding:0;
-        padding-top: 50px;
-        padding-bottom: 20px;
-        margin:auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        height: 80px;
-        
-       h2 {
-       //  border: $border-debug;
-           font-size: 22px;
-           
-       }
-    }
-
-    @media all and (min-width: 769px){
-        .liste_restaurants{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            .title-restaurant{
-                grid-column: span 2;
-            }
-/*
-            .card img{
-                object-position: 50%;
-            }
-*/
-        }       
-    }
-}
-
-.card{
-    position: relative;
-    border-radius: 20px;
-    box-shadow: 1px 7px 15px -3px rgba(74,74,74,0.6);
-    overflow: hidden;
-    margin: 0 auto;
-    width: 96%;
-    transition: 0.2s ease-in-out;
-
-   
-    padding:0;
-    margin:auto;
-    margin-bottom:30px;
-    &:hover{
-        transform: scale(1.02);
-    }
-
-    .link-menu{
-        text-decoration: none;
-        //color: black;
-    }
-
-}
-
-/* card image */ 
-.card{
-
-    .card-img{
-   
-        height: 30vh;
-        width: 100%;
-        img{
-            object-fit: cover;
-           width: 100%;
-           height: 100%
-        }
-    
-        .nouveau-restaurant{
-           //  border:$border-debug;
-            font-size: 16px;
-            font-weight: bolder;
-            color: #2d806b;
-            border-radius: 3px;
-          //   text-align: center;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-           //  line-height: 30px;
-            position: absolute;
-            width: 75px;
-            height: 30px;
-            top: 5%;
-            right: 5%;
-            background-color: #99E2D0;
-          }
-    }
-}
-
-
-/* card description  */ 
-.card{
-    .card-description{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-    //    border: $border-greendebug;
-        background-color: white;
-
-
-        .card-title {
-            // height:10vh;
-        // border: $border-greendebug;
-            display: flex;
-            flex-direction: column;
-            padding: 10px 15px 15px 15px ;
-           //  padding-left:15px;
-            justify-content: center;
-            margin:0;
-            
+    //   border: $border-debug;
+    padding:0 30px;   // XXX added
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(233, 233, 233);
+      //gap: 15px;
+     padding-bottom: 70px;
+  
+      .title-restaurant{
+       //   border: $border-debug;
+         // XXXXX  width: 96%;
+          padding:0;
+         
+          padding-top: 50px;
+          padding-bottom: 20px;
+         // xxx margin:auto;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-end;
+          height: 80px;
           
-            color: black;
+         h2 {
+         //  border: $border-debug;
+             font-size: $fs-restaurant-title;
+             
+         }
+      }
+  
+      @media all and (min-width: 769px){
+          .liste_restaurants{
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap:20px;
+              .title-restaurant{
+                  grid-column: span 2;
+              }
+  /*
+              .card img{
+                  object-position: 50%;
+              }
+  */
+          }  
+          .card {
+            width:100%;
+        }   
 
-            background-color: #fff;
-        
-            .card-name{
-                margin:0p;
-                margin-top:10px;
-                font-size:  20px;
-                font-weight: bolder;
-                margin-bottom:5px;
-            }
-            
-            .card-location{
-                margin:0px;
-                margin-bottom:3px;
-                font-size:  15px;
-            
-            }
-
-        }
-        .heart {
-        
-            // border:  $border-greendebug;
-            display:flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            padding-right: 15px;
-          //   width:25%;
-            
-        
-            .fill{
-             //    border : $border-greendebug;
-                font-size: 25px;
-                color: black;
-               
-                cursor: pointer;
-                margin-right: 15px;
-                line-height: 38px;
-                // opacity:1;
-
-                &:hover{
-
-                    // https://www.w3docs.com/learn-css/text-fill-color.html
-                    // http://jsfiddle.net/DoubleYo/qGfzm/
-                    // https://developer.mozilla.org/fr/docs/Web/CSS/background-clip
-
-                    // animation: 5s fill cubic-bezier(0,1.04,.13,-0.94);
-                    //  background:linear-gradient(to left, #9356dc, #b35cdc,#cf64dc, #e86edb, #ff79da);
-                    // overflow:hidden;
-                  //    background-color: #b35cdc;
-                    
- 
-     
-         //    
-          //  display: inline-block;
           /* 
-          opacity: 1;
-            background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-         font-weight: bold;
-          */ 
-            //   background:-webkit-linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-        //   background: #b35cdc;
-
-             animation: 2s  k-anim-heart ease ;
-             opacity: 1;
-             background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-             -webkit-background-clip: text;
-             -webkit-text-fill-color: transparent;
-          font-weight: bold;
-           
-                }
-
-               
+          .card {
+              width:96%;
+          }   
+          */
+      }
+  }
+  
+  .card{
+      position: relative;
+      border-radius: 20px;
+      box-shadow: 1px 7px 15px -3px rgba(74,74,74,0.6);
+      overflow: hidden;
+      margin: 0 auto;
+     // xxx width: 96%;
+      transition: 0.2s ease-in-out;
+  
+     
+      padding:0;
+      margin:auto;
+      margin-bottom:30px;
+      &:hover{
+          transform: scale(1.02);
+      }
+  
+      .link-menu{
+          text-decoration: none;
+          //color: black;
+      }
+  
+  }
+  
+  /* card image */ 
+  .card{
+  
+      .card-img{
+     
+          height: 30vh;
+          width: 100%;
+          img{
+              object-fit: cover;
+             width: 100%;
+             height: 100%
+          }
+      
+          .nouveau-restaurant{
+             //  border:$border-debug;
+              font-size: $fs-restaurant-nouveau;
+              font-weight: bolder;
+              color: #2d806b;
+              border-radius: 3px;
+            //   text-align: center;
+              display:flex;
+              justify-content: center;
+              align-items: center;
+             //  line-height: 30px;
+              position: absolute;
+              width: 75px;
+              height: 30px;
+              top: 5%;
+              right: 5%;
+              background-color: #99E2D0;
             }
-            }
-        
-    }
-}
-
+      }
+  }
+  
+  
+  /* card description  */ 
+  .card{
+      .card-description{
+          display:flex;
+          flex-direction: row;
+          justify-content: space-between;
+      //    border: $border-greendebug;
+          background-color: white;
+  
+  
+          .card-title {
+              // height:10vh;
+          // border: $border-greendebug;
+              display: flex;
+              flex-direction: column;
+              padding: 10px 15px 15px 15px ;
+             //  padding-left:15px;
+              justify-content: center;
+              margin:0;
+              
+            
+              color: black;
+  
+              background-color: #fff;
+          
+              .card-name{
+                  margin:0p;
+                  margin-top:10px;
+                  font-size:  $fs-restaurant-name;
+                  font-weight: bolder;
+                  margin-bottom:5px;
+              }
+              
+              .card-location{
+                  margin:0px;
+                  margin-bottom:3px;
+                  font-size:  $fs-restaurant-location;
+              
+              }
+  
+          }
+          .heart {
+            @include heart-OMF;
+           }
+          
+      }
+  }
 
 @keyframes k-anim-heart-ee {
     from {
@@ -543,10 +505,11 @@ footer {
     }
 }
 
+
 footer .svg-color {
   // fill: white;
    width: 100px;
-   stroke: white;
+  // stroke: white;
    
   }
 
@@ -574,7 +537,7 @@ footer .svg-color {
           
             .foot-icon{
                 padding-right: 10px;
-                font-size: 12px;
+                font-size: $fs-footer-icon;
               }
 
             &:hover {
@@ -583,7 +546,7 @@ footer .svg-color {
               }
 
             .foot-txt{
-                font-size: 15px;
+                font-size: $fs-footer-txt;
             }  
           }
         
@@ -613,14 +576,9 @@ footer .svg-color {
      left: 2%;
  }
 
-.title-site.margin {
-    margin-top: 10px;
-    margin-bottom: 10px;
-   //  border: $border-reddebug;
-}
 
  header div a i {
- font-size: 19px; 
+ font-size: $fs-menu-header-arrow; 
 }
 
 // ---------------------------------------------
@@ -666,16 +624,16 @@ footer .svg-color {
       //   margin-left: 20px;
         font-family: 'Shrikhand', sans-serif;
 
-        .heart .fill{
-            font-size: 25px;
-            margin-right:24px;
-            color: black;
+        .heart {
+                // border:  $border-greendebug;
+                @include heart-OMF;
+            }
 
-        }
+
     }
 
     h2 {
-        font-size: 25px;
+        font-size: $fs-menu-restaurant-name;
         font-weight:600;;
     }
 
@@ -687,7 +645,7 @@ footer .svg-color {
         margin-right:20px;
         text-transform: uppercase;
         font-weight: lighter;
-       //   font-size: 50px;
+         font-size: $fs-menu-part;
         opacity: 0.5;
       //  padding-left: 15px;
       //   padding-top: 20px;
@@ -747,7 +705,7 @@ footer .svg-color {
                
                 margin:0;
                 padding:0;
-                font-size: 18px;;
+                font-size: $fs-menu-element-name;
                 margin-bottom: 5px;
                 text-overflow: ellipsis;
                  white-space: nowrap;
@@ -757,7 +715,7 @@ footer .svg-color {
                
                 margin:0;
                 padding:0;
-                font-size: 14px;
+                font-size: $fs-menu-element-description;
                 opacity:0.6;
                 text-overflow: ellipsis;
                 white-space: nowrap;
@@ -777,7 +735,7 @@ footer .svg-color {
         height:100%;
         
         font-weight: bold;
-        font-size: 14px;
+        font-size: $fs-menu-element-price;
        // padding:10px;
       
         position: relative;
@@ -812,7 +770,7 @@ footer .svg-color {
          transition: all ease 0.5s;
 
         .icon-coche{
-            font-size: 22px;
+            font-size: $fs-menu-element-icon-coche;
         }
 
         .coche-fill{
@@ -868,7 +826,7 @@ grid-template-columns: 1fr 1fr 1fr;
 
 .underline {
     position: relative;
-   // border:$border-debug;
+   //  border:$border-debug;
     .line{
         width: 50px;
         height: 7px;
@@ -937,16 +895,19 @@ grid-template-columns: 1fr 1fr 1fr;
 //  Animation:  Home page
 // ---------------------------------------------
 
+/*
 .anim_page_main {
     animation: k-load_page_main 4s;
 }
+*/
+
 
 .anim_main_load{
     animation: k-load 5s  ; 
         position:fixed;
-        top:50%;
-        right: 50%;
-     
+        top:40%;
+        left: 40%;
+   // XXXXXX     transform: translate(-50%,-50%);
         opacity: 0;
         z-index: 111150;
 
@@ -964,12 +925,13 @@ grid-template-columns: 1fr 1fr 1fr;
                 align-items: center;
                 justify-content: center;
                 font-family: 'Shrikhand', sans-serif;
-                font-size: 12px;
+                font-size: $fs-anim-txt;
+             
         
         }
 }
 
-
+/*
 @keyframes k-load_page_main {
     0%,80%{
         opacity: 0.5;
@@ -978,7 +940,7 @@ grid-template-columns: 1fr 1fr 1fr;
         opacity: 1;
     }
 }
-
+*/
 
 @keyframes k-load {
     0%,80%{
