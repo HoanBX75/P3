@@ -1,3 +1,4 @@
+/* version v7 */ 
 
 /* VARIABLE */
 @import "./utils/variables";    
@@ -16,6 +17,8 @@ html{
 body {
     margin:0;
 }
+
+
 /* ----------------------------------------------------*/
 /* Site title header                                   */
 /* ----------------------------------------------------*/
@@ -29,21 +32,6 @@ body {
     // border: $border-debug;
 }
 
-/*
-.title-site.margin {
-
-     
-}
-
-
-
-.title-site img{
-   // border: $border-debug;
-    width:40%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-*/
 
 /* ----------------------------------------------------*/
 /* form section                                        */
@@ -257,7 +245,7 @@ body {
 
 .restaurant{
     //   border: $border-debug;
-    padding:0 30px;   // XXX added
+    padding:0 30px;  
       display: flex;
       flex-direction: column;
       background-color: rgb(233, 233, 233);
@@ -292,21 +280,12 @@ body {
               .title-restaurant{
                   grid-column: span 2;
               }
-  /*
-              .card img{
-                  object-position: 50%;
-              }
-  */
+  
           }  
           .card {
             width:100%;
         }   
 
-          /* 
-          .card {
-              width:96%;
-          }   
-          */
       }
   }
   
@@ -316,7 +295,7 @@ body {
       box-shadow: 1px 7px 15px -3px rgba(74,74,74,0.6);
       overflow: hidden;
       margin: 0 auto;
-     // xxx width: 96%;
+    
       transition: 0.2s ease-in-out;
   
      
@@ -329,7 +308,7 @@ body {
   
       .link-menu{
           text-decoration: none;
-          //color: black;
+        
       }
   
   }
@@ -338,7 +317,7 @@ body {
   .card{
   
       .card-img{
-     
+         
           height: 30vh;
           width: 100%;
           img{
@@ -363,7 +342,7 @@ body {
               height: 30px;
               top: 5%;
               right: 5%;
-              background-color: #99E2D0;
+              background-color: $color3;
             }
       }
   }
@@ -380,12 +359,12 @@ body {
   
   
           .card-title {
-              // height:10vh;
+
           // border: $border-greendebug;
               display: flex;
               flex-direction: column;
               padding: 10px 15px 15px 15px ;
-             //  padding-left:15px;
+         
               justify-content: center;
               margin:0;
               
@@ -417,33 +396,22 @@ body {
       }
   }
 
-@keyframes k-anim-heart-ee {
-    from {
-      opacity: 0;
-      
-    }
-    to {
-     
-      opacity: 1;
-      background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-   font-weight: bold;
+/* ----------------------------------------------------*/
+/* Animation  : Heart                                  */
+/* ----------------------------------------------------*/
 
-    }
-  }
+
   @keyframes k-anim-heart {
     0%{
         opacity: 0.1;
-        // font-weight: 400;
-        // background-position: -20px;
+
         background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
      font-weight: bold;    }
     20%{
         opacity: 0.5;
-       //  background-position: -10px;
+       
        background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
        -webkit-background-clip: text;
        -webkit-text-fill-color: transparent;
@@ -451,7 +419,7 @@ body {
   }
     50%{
         opacity: 0.7;
-       //  background-position: 0px;
+     
        background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
        -webkit-background-clip: text;
        -webkit-text-fill-color: transparent;
@@ -459,7 +427,7 @@ body {
     }
     80%{
         opacity: 0.8;
-      //   background-position: 10px;
+  
       background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -467,7 +435,7 @@ body {
     }
     100%{
         opacity: 1;
-    //  background-position: 20px;
+   
     background:linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -490,11 +458,10 @@ footer {
 
 
 .title-site_footer{
-  //  border: $border-debug;
-   //  width:100%;
+ 
     margin-left:20px; 
     margin-right:20px;
-   //  margin:auto;
+ 
     margin-top:15px;
    
    img{
@@ -516,17 +483,16 @@ footer .svg-color {
 
 .nav-footer{
   
-   // width:96%;  xxxxx mettre un padding 
-   // width:100%;
+ 
    margin-left:20px; 
     margin-right:20px;
 
-    // margin:auto;
+  
     ul {
         display: flex;
         flex-direction: column;
         list-style-type: none;
-        // gap: 8px;
+    
         padding:0;
         li {
             margin-bottom: 10px;
@@ -560,6 +526,12 @@ footer .svg-color {
       }
 
 }
+
+/* **************************************************************************** */
+/*                     CARTE MENU                                               */
+/* **************************************************************************** */
+
+
 
 
 // ---------------------------------------------
@@ -609,8 +581,7 @@ footer .svg-color {
     padding-top: 30px;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
-   //  margin-bottom: -35px;
- //  transform: translateY(-35px);
+
     padding-bottom: 35px;
 
     .title-menu{
@@ -621,7 +592,7 @@ footer .svg-color {
          
         justify-content:space-between;
         align-items: center;
-      //   margin-left: 20px;
+    
         font-family: 'Shrikhand', sans-serif;
 
         .heart {
@@ -636,7 +607,6 @@ footer .svg-color {
         font-size: $fs-menu-restaurant-name;
         font-weight:600;;
     }
-
 
     h3{
     
@@ -662,20 +632,18 @@ footer .svg-color {
 
 .card-menu{
  //   border: 1px solid red;
-   //  width:96%;
+  
     display: flex;
     justify-content: flex-start;
     align-items: center;
-   //  flex:1 1 0;
-   // flex:1 1 0;
-      //  width: 95%;
+
 
       height: 70px;  
-     // XXXXX 
+    
     margin-left:20px; 
     margin-right:20px;
     margin-bottom: 20px;
-   // margin: 20px auto;
+
    
     cursor: pointer;
     
@@ -736,7 +704,6 @@ footer .svg-color {
         
         font-weight: bold;
         font-size: $fs-menu-element-price;
-       // padding:10px;
       
         position: relative;
 
@@ -750,9 +717,9 @@ footer .svg-color {
         }
     }
 
-    /* ========================== */
-    /* Menu  Card  : Coche  */
-    /* ============================ */
+    /* ======================== */
+    /* Menu  Card  : Coche      */
+    /* ======================== */
 
     .coche{
 
@@ -781,11 +748,7 @@ footer .svg-color {
     /* ================== */
     /* Menu Card : Events */
     /* ================== */
-    /*
-    &:hover .card-txt{    
-        width: 60%;
-    }
-    */
+
 
     &:hover .coche{
         opacity:1;
@@ -799,13 +762,10 @@ footer .svg-color {
 }    // fin card menu 
 
 @media all and (min-width: 769px){
-/*
-    display:grid;
-    grid-template: 1fr 1fr 1fr;
-*/
+
 display: grid;
 grid-template-columns: 1fr 1fr 1fr;
-// gap:3%;
+
 }
 
 
@@ -869,7 +829,6 @@ grid-template-columns: 1fr 1fr 1fr;
 
 
 
-
 @function  menuCarteDuration($num) {
     @return (($num % 3) + 1) ;
 }
@@ -910,14 +869,9 @@ grid-template-columns: 1fr 1fr 1fr;
 
 
 // ---------------------------------------------
-//  Animation:  Home page
+//  Animation:  Spinner  Home page
 // ---------------------------------------------
 
-/*
-.anim_page_main {
-    animation: k-load_page_main 4s;
-}
-*/
 
 
 .anim_main_load{
@@ -925,7 +879,6 @@ grid-template-columns: 1fr 1fr 1fr;
         position:fixed;
         top:40%;
         left: 40%;
-   // XXXXXX     transform: translate(-50%,-50%);
         opacity: 0;
         z-index: 111150;
 
@@ -933,8 +886,7 @@ grid-template-columns: 1fr 1fr 1fr;
                 animation: k-spiner 5s  ;
                 position: absolute;
                 display: flex;
-                //  top: 50%;
-                //  left: 50%;
+
                 width: 25vw;
                 height: 25vh;
                 border-radius: 12px 12px 12px 12px;
@@ -949,16 +901,7 @@ grid-template-columns: 1fr 1fr 1fr;
         }
 }
 
-/*
-@keyframes k-load_page_main {
-    0%,80%{
-        opacity: 0.5;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-*/
+
 
 @keyframes k-load {
     0%,80%{

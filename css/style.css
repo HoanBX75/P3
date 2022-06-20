@@ -1,5 +1,8 @@
+/* version v7 */
 /* VARIABLE */
+/* version v7 */
 /* MIXINS  */
+/* version v7 */
 html {
   font-family: "roboto", sans-serif;
   font-size: 16px;
@@ -21,21 +24,6 @@ body {
   margin-bottom: 15px;
 }
 
-/*
-.title-site.margin {
-
-
-}
-
-
-
-.title-site img{
-   // border: $border-debug;
-    width:40%;
-    margin-top: 25px;
-    margin-bottom: 25px;
-}
-*/
 /* ----------------------------------------------------*/
 /* form section                                        */
 /* ----------------------------------------------------*/
@@ -207,22 +195,10 @@ body {
   font-size: 23px;
 }
 @media all and (min-width: 769px) {
-  .restaurant {
-    /* 
-    .card {
-        width:96%;
-    }   
-    */
-  }
   .restaurant .liste_restaurants {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    /*
-                .card img{
-                    object-position: 50%;
-                }
-    */
   }
   .restaurant .liste_restaurants .title-restaurant {
     grid-column: span 2;
@@ -327,18 +303,9 @@ body {
   font-weight: bold;
 }
 
-@keyframes k-anim-heart-ee {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-    background: linear-gradient(to left, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-  }
-}
+/* ----------------------------------------------------*/
+/* Animation  : Heart                                  */
+/* ----------------------------------------------------*/
 @keyframes k-anim-heart {
   0% {
     opacity: 0.1;
@@ -435,6 +402,9 @@ footer .svg-color {
   }
 }
 
+/* **************************************************************************** */
+/*                     CARTE MENU                                               */
+/* **************************************************************************** */
 .menu_main {
   margin: auto;
 }
@@ -535,17 +505,12 @@ header div a i {
   /* ===================== */
   /* Menu  Card Price */
   /* ===================== */
-  /* ========================== */
-  /* Menu  Card  : Coche  */
-  /* ============================ */
+  /* ======================== */
+  /* Menu  Card  : Coche      */
+  /* ======================== */
   /* ================== */
   /* Menu Card : Events */
   /* ================== */
-  /*
-  &:hover .card-txt{    
-      width: 60%;
-  }
-  */
 }
 .menu-restaurant .card-menu .card-txt {
   flex: 1 1 0;
@@ -610,10 +575,6 @@ header div a i {
 }
 @media all and (min-width: 769px) {
   .menu-restaurant {
-    /*
-        display:grid;
-        grid-template: 1fr 1fr 1fr;
-    */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -713,11 +674,6 @@ header div a i {
     transform: translateY(0px);
   }
 }
-/*
-.anim_page_main {
-    animation: k-load_page_main 4s;
-}
-*/
 .anim_main_load {
   animation: k-load 5s;
   position: fixed;
@@ -740,16 +696,6 @@ header div a i {
   font-size: 16px;
 }
 
-/*
-@keyframes k-load_page_main {
-    0%,80%{
-        opacity: 0.5;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-*/
 @keyframes k-load {
   0%, 80% {
     opacity: 1;
